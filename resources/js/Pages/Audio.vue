@@ -22,14 +22,12 @@
       <div class="flex justify-around mt-0 items-center mb-2">
         <button
           type="button"
-          class="transition w-4 h-4 mt-4 fill-current hover:fill-blue-600"
           @click="prev"
         >
           <icon name="prev"></icon>
         </button>
         <button
           type="button"
-          class="transition w-4 h-4 mt-4 fill-current hover:fill-blue-600"
           @click="play"
           v-if="!isPlaying"
         >
@@ -37,7 +35,6 @@
         </button>
         <button
           type="button"
-          class="transition w-4 h-4 mt-4 fill-current hover:fill-blue-600"
           @click="pause"
           v-else
         >
@@ -45,7 +42,6 @@
         </button>
         <button
           type="button"
-          class="transition w-4 h-4 mt-4 fill-current hover:fill-blue-600"
           @click="next"
         >
           <icon name="next"></icon>
