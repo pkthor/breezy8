@@ -31,7 +31,7 @@ import { Head } from "@inertiajs/inertia-vue3";
             </p>
 
             <h1 class="font-semibold text-xl text-black leading-tight m-auto">
-              Title here
+              Come nasce questo sito?
               </h1>
 
             <p class="p-2 mb-2">

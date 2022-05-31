@@ -56,9 +56,9 @@ const showingNavigationDropdown = ref(false);
                                     </template>
 
                                     <template #content class="bg-blue-200">
-                                        <!-- <BreezeDropdownLink :href="route('reader')" method="get" as="button"  class="bg-orange-200">
-                                            Reader
-                                        </BreezeDropdownLink> -->
+                                        <BreezeDropdownLink :href="route('reader')" method="get" as="button" >
+                                            FAQ
+                                        </BreezeDropdownLink>
                                         <BreezeDropdownLink :href="route('logout')" method="post" as="button">
                                             Esci
                                         </BreezeDropdownLink>
@@ -86,11 +86,11 @@ const showingNavigationDropdown = ref(false);
                             Libro di Mormon
                         </BreezeResponsiveNavLink>
                     </div>
-                    <!-- <div class="pt-2 pb-3 space-y-1">
-                        <BreezeResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                            About
+                    <div class="pt-2 pb-3 space-y-1">
+                        <BreezeResponsiveNavLink :href="route('reader')" :active="route().current('reader')">
+                            FAQ
                         </BreezeResponsiveNavLink>
-                    </div> -->
+                    </div>
 
                     <!-- Responsive Settings Options -->
                     <div class="pt-4 pb-1 border-t border-gray-200">
