@@ -1,7 +1,8 @@
 
 
 <template>
-  <div class="relative bg-gradient-to-b from-blue-400 to-blue-100 p-8 flex flex-col items-center rounded-lg drop-shadow-lg">
+    <!-- Main Audio 'card'.  -->
+  <div class="w-screen h-screen md:h-auto md:w-auto relative bg-gradient-to-b from-blue-400 to-blue-100 p-8 flex flex-col items-center rounded-lg drop-shadow-lg">
     <div>
       <p class="text-center text-xl font-bold">Il Libro di Mormon</p>
       <p class="text-center text-md font-semibold mb-2">Ad alta voce</p>

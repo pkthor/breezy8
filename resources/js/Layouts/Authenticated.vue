@@ -12,7 +12,8 @@ const showingNavigationDropdown = ref(false);
 
 <template>
     <div>
-        <div class="min-h-screen sm:bg-blue-200 w-auto bg-blue-200">
+        <!-- Main background -->
+        <div class="min-h-screen w-auto h-auto bg-blue-200">
             <nav class="bg-blue-300 border-b border-gray-100">
                 <!-- Primary Navigation Menu -->
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -102,7 +103,7 @@ const showingNavigationDropdown = ref(false);
                         <div class="mt-3 space-y-1">
                             <BreezeResponsiveNavLink :href="route('logout')" method="post" as="button">
                                 Esci
-                            </BreezeResponsiveNavLink>
+                            </BreezeResponsiveNavLink> 
                         </div>
                     </div>
                 </div>
@@ -115,8 +116,8 @@ const showingNavigationDropdown = ref(false);
                 </div>
             </header> -->
 
-            <!-- Page Content -->
-            <main>
+            <!-- Page Content. Audio.vue -->
+            <main class="">
                 <slot />
             </main>
         </div>
