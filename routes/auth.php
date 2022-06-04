@@ -58,4 +58,5 @@ Route::middleware('auth')->group(function () {
 
     Route::put('reader', [RegisteredUserController::class, 'update']);///PKT
     //For the route /update-uuid, with a put request, the 'update' function of RegisteredUserController should handle the logic.
+
 });

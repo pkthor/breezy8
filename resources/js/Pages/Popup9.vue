@@ -447,7 +447,7 @@ var allReaders = [
     chapter: 31,
     narrator: "Davide Giugliarelli",
     narratorImageName: "DavideGiugliarelli",
-    chapterImageName: "Alma31",
+    chapterImageName: "Alma3",
     audioFileName: "Alma31",
     isActiveBookmark: false,
     src: "assets/media/Alma31.mp3",

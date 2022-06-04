@@ -45,10 +45,3 @@ Route::get('/reader', function () {
 })->middleware(['auth', 'verified'])->name('reader');
 
 require __DIR__.'/auth.php';
-
-
-// Route::resource('update-uuid', RegisteredUserController::class);
-
-Route::get('/greeting', function () {
-    return 'Hello World';
-});
