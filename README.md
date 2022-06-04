@@ -1,4 +1,4 @@
-Come nasce questo sito?
+Come nasce questo sito?\n
 Nel conferenza generale di ottobre 2011, Anziano Richard G. Scott,
               un membro del Quorum dei Dodici Apostoli disse: Nel 1991 volli
               fare alla mia famiglia un regalo di Natale speciale. Scrissi nel
@@ -15,7 +15,7 @@ Nel conferenza generale di ottobre 2011, Anziano Richard G. Scott,
               Gesù Cristo, ne conosceranno la veridicità e troveranno un tesoro
               che li condurrà, in questa vita, a maggiore felicità, pace e
               successo. Testimonio, su tutto ciò che è sacro, che questo libro è
-              vero”.
+              vero”.\n
 Pochi anni dopo, i miei fratelli e le mie sorelle vollero
               fare la stessa cosa creando un’applicazione della nostra famiglia
               che legge il Libro di Mormon ai nostri figli e nipoti. Non appena
