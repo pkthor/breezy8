@@ -63,7 +63,16 @@ import { Head } from "@inertiajs/inertia-vue3";
               2019. Da allora ci sono state diverse rivisitazioni. Spero che
               possiate apprezzare quest’opera d’amore.
             </p>
+            <img
+              class="h-40 bg-blue-400 mx-auto"
+              src="/assets/photos/ericloree.jpg"
+              alt="Eric e Loree Thorderson"
+            />
+            <p class="mx-auto text-center">
+              Eric e Loree Thorderson
+            </p>
           </div>
+          
         </div>
       </div>
     </div>
