@@ -29,8 +29,8 @@ function menuChosen() {
   <BreezeAuthenticatedLayout>
     <div class="">
       <div class=" grid place-items-center">
-          <div class="relative flex sm:p-2">
-            <Button class=" sm:bg-blue-300 hover:bg-blue-400 h-10 font-bold text-white text-lg absolute top-0 left-0 z-10 " @click="menuChosen"> Menu </Button>
+          <div class="relative flex">
+            <Button class=" lg:bg-blue-300 hover:bg-blue-400 mt-2 h-20 w-auto lg:h-10 font-bold text-white text-3xl lg:text-lg absolute top-0 left-0 ml-0 lg:ml-0 z-10 " @click="menuChosen"> Menu </Button>
             <Tab2 v-if="menuStatus.isMenuOpen"  class="absolute p-2 flex"/>
             <Audio />
           </div>

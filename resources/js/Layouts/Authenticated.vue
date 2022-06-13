@@ -16,36 +16,30 @@ const showingNavigationDropdown = ref(false);
         <div class="min-h-screen w-auto h-auto bg-blue-200">
             <nav class="bg-blue-300 border-b border-gray-100">
                 <!-- Primary Navigation Menu -->
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="flex justify-between h-12 sm:h-16">
+                <div class="max-w-7xl mx-auto px-4 lg:px-6 lg:px-8">
+                    <div class="flex justify-between h-16 lg:h-12">
                         <div class="flex">
-                            <!-- Logo -->
-                            <!-- <div class="shrink-0 flex items-center">
-                                <Link :href="route('dashboard')">
-                                    <BreezeApplicationLogo class="block h-2/12 w-2/12" />
-                                </Link>
-                            </div> -->
 
                             <!-- Navigation Links -->
-                            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                            <div class="hidden space-x-8 lg:-my-px lg:ml-10 lg:flex">
                                 <BreezeNavLink :href="route('dashboard')" :active="route().current('dashboard')">
                                     Libro di Mormon
                                 </BreezeNavLink>
                             </div>
-                            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                            <div class="hidden space-x-8 lg:-my-px lg:ml-10 lg:flex">
                                 <BreezeNavLink :href="route('reader')" :active="route().current('reader')">
                                     FAQ
                                 </BreezeNavLink>
                             </div>
                         </div>
 
-                        <div class="hidden sm:flex sm:items-center sm:ml-6">
+                        <div class="hidden lg:flex lg:items-center lg:ml-6 h-28 lg:h-12">
                             <!-- Settings Dropdown -->
                             <div class="ml-3 relative">
                                 <BreezeDropdown align="right" width="48">
                                     <template #trigger>
                                         <span class="inline-flex rounded-md">
-                                            <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-600 bg-blue-100 hover:text-gray-800 focus:outline-none transition ease-in-out duration-150">
+                                            <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-xl sm:text-sm leading-4 font-medium rounded-md text-gray-600 bg-blue-100 hover:text-gray-800 focus:outline-none transition ease-in-out duration-150">
                                                 {{ $page.props.auth.user.name }}
 
                                                 <!-- this is the down facing caret svg -->
@@ -69,9 +63,9 @@ const showingNavigationDropdown = ref(false);
                         </div>
 
                         <!-- Hamburger -->
-                        <div class="-mr-2 flex items-center sm:hidden">
+                        <div class="-mr-2 flex items-center lg:hidden">
                             <button @click="showingNavigationDropdown = ! showingNavigationDropdown" class="inline-flex items-center justify-center p-2 rounded-md text-blue-500 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-blue-600 transition duration-150 ease-in-out">
-                                <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                                <svg class="h-12 w-12" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                                     <path :class="{'hidden': showingNavigationDropdown, 'inline-flex': ! showingNavigationDropdown }" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                                     <path :class="{'hidden': ! showingNavigationDropdown, 'inline-flex': showingNavigationDropdown }" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                                 </svg>
@@ -81,14 +75,14 @@ const showingNavigationDropdown = ref(false);
                 </div>
 
                 <!-- Responsive Navigation Menu -->
-                <div :class="{'block': showingNavigationDropdown, 'hidden': ! showingNavigationDropdown}" class="sm:hidden">
-                    <div class="pt-2 pb-3 space-y-1">
-                        <BreezeResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
+                <div :class="{'block': showingNavigationDropdown, 'hidden': ! showingNavigationDropdown}" class="lg:hidden">
+                    <div class="pt-2 pb-3 space-y-1 text-xl">
+                        <BreezeResponsiveNavLink class="text-3xl" :href="route('dashboard')" :active="route().current('dashboard')">
                             Libro di Mormon
                         </BreezeResponsiveNavLink>
                     </div>
                     <div class="pt-2 pb-3 space-y-1">
-                        <BreezeResponsiveNavLink :href="route('reader')" :active="route().current('reader')">
+                        <BreezeResponsiveNavLink class="text-3xl" :href="route('reader')" :active="route().current('reader')">
                             FAQ
                         </BreezeResponsiveNavLink>
                     </div>
@@ -96,12 +90,12 @@ const showingNavigationDropdown = ref(false);
                     <!-- Responsive Settings Options -->
                     <div class="pt-4 pb-1 border-t border-gray-200">
                         <div class="px-4">
-                            <div class="font-medium text-base text-gray-800">{{ $page.props.auth.user.name }}</div>
-                            <div class="font-medium text-sm text-gray-500">{{ $page.props.auth.user.email }}</div>
+                            <div class="font-medium text-xl text-gray-800">{{ $page.props.auth.user.name }}</div>
+                            <div class="font-medium text-xl text-gray-500">{{ $page.props.auth.user.email }}</div>
                         </div>
 
                         <div class="mt-3 space-y-1">
-                            <BreezeResponsiveNavLink :href="route('logout')" method="post" as="button">
+                            <BreezeResponsiveNavLink class="text-3xl" :href="route('logout')" method="post" as="button">
                                 Esci
                             </BreezeResponsiveNavLink> 
                         </div>
@@ -117,7 +111,7 @@ const showingNavigationDropdown = ref(false);
             </header> -->
 
             <!-- Page Content. Audio.vue -->
-            <main class="">
+            <main>
                 <slot />
             </main>
         </div>

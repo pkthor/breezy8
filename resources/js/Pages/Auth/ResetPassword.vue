@@ -33,21 +33,21 @@ const submit = () => {
 
         <form @submit.prevent="submit">
             <div>
-                <BreezeLabel for="email" value="Email" />
-                <BreezeInput id="email" type="email" class="mt-1 block w-full" v-model="form.email" required autofocus autocomplete="username" />
+                <BreezeLabel for="email" value="Email" class="text-3xl lg:text-base font-semibold" />
+                <BreezeInput id="email" type="email" class="mt-1 block w-full text-2xl lg:text-base" v-model="form.email" required autofocus autocomplete="username" />
             </div>
 
             <div class="mt-4">
-                <BreezeLabel for="password" value="Password" />
-                <BreezeInput id="password" type="password" class="mt-1 block w-full" v-model="form.password" required autocomplete="new-password" />
+                <BreezeLabel for="password" value="Password" class="text-3xl lg:text-base font-semibold" />
+                <BreezeInput id="password" type="password" class="mt-1 block w-full text-2xl lg:text-base" v-model="form.password" required autocomplete="new-password" />
             </div>
 
             <div class="mt-4">
-                <BreezeLabel for="password_confirmation" value="Confirm Password" />
-                <BreezeInput id="password_confirmation" type="password" class="mt-1 block w-full" v-model="form.password_confirmation" required autocomplete="new-password" />
+                <BreezeLabel for="password_confirmation" value="Confirm Password" class="text-3xl lg:text-base font-semibold" />
+                <BreezeInput id="password_confirmation" type="password" class="mt-1 block w-full text-2xl lg:text-base" v-model="form.password_confirmation" required autocomplete="new-password" />
             </div>
 
-            <div class="flex items-center justify-end mt-4">
+            <div class="flex items-center justify-end mt-4 text-xl lg:text-base">
                 <BreezeButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
                     Reimposta password
                 </BreezeButton>

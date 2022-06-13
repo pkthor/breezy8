@@ -23,7 +23,7 @@ const submit = () => {
     <BreezeGuestLayout>
         <Head title="Forgot Password" />
 
-        <div class="mb-4 text-sm text-gray-600">
+        <div class="mb-4 text-2xl lg:text-base text-gray-600 text-center">
             Hai dimenticato la tua password? Nessun problema. Forniscici il tuo indirizzo e-mail e ti invieremo un link per creare una nuova password.
         </div>
 
@@ -35,11 +35,11 @@ const submit = () => {
 
         <form @submit.prevent="submit">
             <div>
-                <BreezeLabel for="email" value="Email" />
-                <BreezeInput id="email" type="email" class="mt-1 block w-full" v-model="form.email" required autofocus autocomplete="username" />
+                <BreezeLabel for="email" value="Email" class="text-3xl lg:text-base font-semibold"  />
+                <BreezeInput id="email" type="email" class="mt-1 block w-full text-2xl lg:text-base " v-model="form.email" required autofocus autocomplete="username" />
             </div>
 
-            <div class="flex items-center justify-end mt-4">
+            <div class="flex items-center justify-end mt-4 text-xl lg:text-base">
                 <BreezeButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
                     Link di reset della password
                 </BreezeButton>

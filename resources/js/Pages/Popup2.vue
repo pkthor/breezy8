@@ -1,38 +1,38 @@
 <template>
-  <div v-if="isOpen" class="grid grid-cols-4 gap-x-12 gap-y-2 max-w-fit">
-    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black font-bold rounded h-10 w-10 hover:text-xl" @click="selectReaderForUser('2Nefi1',$page.props.auth.user)">1</button>
-    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black font-bold rounded h-10 w-10 hover:text-xl" @click="selectReaderForUser('2Nefi2',$page.props.auth.user)">2</button>
-    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black font-bold rounded h-10 w-10 hover:text-xl" @click="selectReaderForUser('2Nefi3',$page.props.auth.user)">3</button>
-    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black font-bold rounded h-10 w-10 hover:text-xl" @click="selectReaderForUser('2Nefi4',$page.props.auth.user)">4</button>
-    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black font-bold rounded h-10 w-10 hover:text-xl" @click="selectReaderForUser('2Nefi5',$page.props.auth.user)">5</button>
-    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black font-bold rounded h-10 w-10 hover:text-xl" @click="selectReaderForUser('2Nefi6',$page.props.auth.user)">6</button>
-    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black font-bold rounded h-10 w-10 hover:text-xl" @click="selectReaderForUser('2Nefi7',$page.props.auth.user)">7</button>
-    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black font-bold rounded h-10 w-10 hover:text-xl" @click="selectReaderForUser('2Nefi8',$page.props.auth.user)">8</button>
-    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black font-bold rounded h-10 w-10 hover:text-xl" @click="selectReaderForUser('2Nefi9',$page.props.auth.user)">9</button>
-    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black font-bold rounded h-10 w-10 hover:text-xl" @click="selectReaderForUser('2Nefi10',$page.props.auth.user)">10</button>
-    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black font-bold rounded h-10 w-10 hover:text-xl" @click="selectReaderForUser('2Nefi11',$page.props.auth.user)">11</button>
-    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black font-bold rounded h-10 w-10 hover:text-xl" @click="selectReaderForUser('2Nefi12',$page.props.auth.user)">12</button>
-    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black font-bold rounded h-10 w-10 hover:text-xl" @click="selectReaderForUser('2Nefi13',$page.props.auth.user)">13</button>
-    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black font-bold rounded h-10 w-10 hover:text-xl" @click="selectReaderForUser('2Nefi14',$page.props.auth.user)">14</button>
-    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black font-bold rounded h-10 w-10 hover:text-xl" @click="selectReaderForUser('2Nefi15',$page.props.auth.user)">15</button>
-    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black font-bold rounded h-10 w-10 hover:text-xl" @click="selectReaderForUser('2Nefi16',$page.props.auth.user)">16</button>
-    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black font-bold rounded h-10 w-10 hover:text-xl" @click="selectReaderForUser('2Nefi17',$page.props.auth.user)">17</button>
-    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black font-bold rounded h-10 w-10 hover:text-xl" @click="selectReaderForUser('2Nefi18',$page.props.auth.user)">18</button>
-    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black font-bold rounded h-10 w-10 hover:text-xl" @click="selectReaderForUser('2Nefi19',$page.props.auth.user)">19</button>
-    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black font-bold rounded h-10 w-10 hover:text-xl" @click="selectReaderForUser('2Nefi20',$page.props.auth.user)">20</button>
-    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black font-bold rounded h-10 w-10 hover:text-xl" @click="selectReaderForUser('2Nefi21',$page.props.auth.user)">21</button>
-    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black font-bold rounded h-10 w-10 hover:text-xl" @click="selectReaderForUser('2Nefi22',$page.props.auth.user)">22</button>
-    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black font-bold rounded h-10 w-10 hover:text-xl" @click="selectReaderForUser('2Nefi23',$page.props.auth.user)">23</button>
-    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black font-bold rounded h-10 w-10 hover:text-xl" @click="selectReaderForUser('2Nefi24',$page.props.auth.user)">24</button>
-    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black font-bold rounded h-10 w-10 hover:text-xl" @click="selectReaderForUser('2Nefi25',$page.props.auth.user)">25</button>
-    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black font-bold rounded h-10 w-10 hover:text-xl" @click="selectReaderForUser('2Nefi26',$page.props.auth.user)">26</button>
-    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black font-bold rounded h-10 w-10 hover:text-xl" @click="selectReaderForUser('2Nefi27',$page.props.auth.user)">27</button>
-    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black font-bold rounded h-10 w-10 hover:text-xl" @click="selectReaderForUser('2Nefi28',$page.props.auth.user)">28</button>
-    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black font-bold rounded h-10 w-10 hover:text-xl" @click="selectReaderForUser('2Nefi29',$page.props.auth.user)">29</button>
-    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black font-bold rounded h-10 w-10 hover:text-xl" @click="selectReaderForUser('2Nefi30',$page.props.auth.user)">30</button>
-    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black font-bold rounded h-10 w-10 hover:text-xl" @click="selectReaderForUser('2Nefi31',$page.props.auth.user)">31</button>
-    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black font-bold rounded h-10 w-10 hover:text-xl" @click="selectReaderForUser('2Nefi32',$page.props.auth.user)">32</button>
-    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black font-bold rounded h-10 w-10 hover:text-xl" @click="selectReaderForUser('2Nefi33',$page.props.auth.user)">33</button>
+  <div v-if="isOpen" class="grid grid-cols-4 gap-x-2 lg:gap-x-12 gap-y-2 max-w-fit">
+    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black text-3xl lg:text-base font-bold rounded h-20 w-20 lg:h-10 lg:w-10 hover:text-xl" @click="selectReaderForUser('2Nefi1',$page.props.auth.user)">1</button>
+    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black text-3xl lg:text-base font-bold rounded h-20 w-20 lg:h-10 lg:w-10 hover:text-xl" @click="selectReaderForUser('2Nefi2',$page.props.auth.user)">2</button>
+    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black text-3xl lg:text-base font-bold rounded h-20 w-20 lg:h-10 lg:w-10 hover:text-xl" @click="selectReaderForUser('2Nefi3',$page.props.auth.user)">3</button>
+    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black text-3xl lg:text-base font-bold rounded h-20 w-20 lg:h-10 lg:w-10 hover:text-xl" @click="selectReaderForUser('2Nefi4',$page.props.auth.user)">4</button>
+    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black text-3xl lg:text-base font-bold rounded h-20 w-20 lg:h-10 lg:w-10 hover:text-xl" @click="selectReaderForUser('2Nefi5',$page.props.auth.user)">5</button>
+    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black text-3xl lg:text-base font-bold rounded h-20 w-20 lg:h-10 lg:w-10 hover:text-xl" @click="selectReaderForUser('2Nefi6',$page.props.auth.user)">6</button>
+    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black text-3xl lg:text-base font-bold rounded h-20 w-20 lg:h-10 lg:w-10 hover:text-xl" @click="selectReaderForUser('2Nefi7',$page.props.auth.user)">7</button>
+    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black text-3xl lg:text-base font-bold rounded h-20 w-20 lg:h-10 lg:w-10 hover:text-xl" @click="selectReaderForUser('2Nefi8',$page.props.auth.user)">8</button>
+    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black text-3xl lg:text-base font-bold rounded h-20 w-20 lg:h-10 lg:w-10 hover:text-xl" @click="selectReaderForUser('2Nefi9',$page.props.auth.user)">9</button>
+    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black text-3xl lg:text-base font-bold rounded h-20 w-20 lg:h-10 lg:w-10 hover:text-xl" @click="selectReaderForUser('2Nefi10',$page.props.auth.user)">10</button>
+    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black text-3xl lg:text-base font-bold rounded h-20 w-20 lg:h-10 lg:w-10 hover:text-xl" @click="selectReaderForUser('2Nefi11',$page.props.auth.user)">11</button>
+    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black text-3xl lg:text-base font-bold rounded h-20 w-20 lg:h-10 lg:w-10 hover:text-xl" @click="selectReaderForUser('2Nefi12',$page.props.auth.user)">12</button>
+    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black text-3xl lg:text-base font-bold rounded h-20 w-20 lg:h-10 lg:w-10 hover:text-xl" @click="selectReaderForUser('2Nefi13',$page.props.auth.user)">13</button>
+    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black text-3xl lg:text-base font-bold rounded h-20 w-20 lg:h-10 lg:w-10 hover:text-xl" @click="selectReaderForUser('2Nefi14',$page.props.auth.user)">14</button>
+    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black text-3xl lg:text-base font-bold rounded h-20 w-20 lg:h-10 lg:w-10 hover:text-xl" @click="selectReaderForUser('2Nefi15',$page.props.auth.user)">15</button>
+    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black text-3xl lg:text-base font-bold rounded h-20 w-20 lg:h-10 lg:w-10 hover:text-xl" @click="selectReaderForUser('2Nefi16',$page.props.auth.user)">16</button>
+    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black text-3xl lg:text-base font-bold rounded h-20 w-20 lg:h-10 lg:w-10 hover:text-xl" @click="selectReaderForUser('2Nefi17',$page.props.auth.user)">17</button>
+    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black text-3xl lg:text-base font-bold rounded h-20 w-20 lg:h-10 lg:w-10 hover:text-xl" @click="selectReaderForUser('2Nefi18',$page.props.auth.user)">18</button>
+    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black text-3xl lg:text-base font-bold rounded h-20 w-20 lg:h-10 lg:w-10 hover:text-xl" @click="selectReaderForUser('2Nefi19',$page.props.auth.user)">19</button>
+    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black text-3xl lg:text-base font-bold rounded h-20 w-20 lg:h-10 lg:w-10 hover:text-xl" @click="selectReaderForUser('2Nefi20',$page.props.auth.user)">20</button>
+    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black text-3xl lg:text-base font-bold rounded h-20 w-20 lg:h-10 lg:w-10 hover:text-xl" @click="selectReaderForUser('2Nefi21',$page.props.auth.user)">21</button>
+    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black text-3xl lg:text-base font-bold rounded h-20 w-20 lg:h-10 lg:w-10 hover:text-xl" @click="selectReaderForUser('2Nefi22',$page.props.auth.user)">22</button>
+    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black text-3xl lg:text-base font-bold rounded h-20 w-20 lg:h-10 lg:w-10 hover:text-xl" @click="selectReaderForUser('2Nefi23',$page.props.auth.user)">23</button>
+    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black text-3xl lg:text-base font-bold rounded h-20 w-20 lg:h-10 lg:w-10 hover:text-xl" @click="selectReaderForUser('2Nefi24',$page.props.auth.user)">24</button>
+    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black text-3xl lg:text-base font-bold rounded h-20 w-20 lg:h-10 lg:w-10 hover:text-xl" @click="selectReaderForUser('2Nefi25',$page.props.auth.user)">25</button>
+    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black text-3xl lg:text-base font-bold rounded h-20 w-20 lg:h-10 lg:w-10 hover:text-xl" @click="selectReaderForUser('2Nefi26',$page.props.auth.user)">26</button>
+    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black text-3xl lg:text-base font-bold rounded h-20 w-20 lg:h-10 lg:w-10 hover:text-xl" @click="selectReaderForUser('2Nefi27',$page.props.auth.user)">27</button>
+    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black text-3xl lg:text-base font-bold rounded h-20 w-20 lg:h-10 lg:w-10 hover:text-xl" @click="selectReaderForUser('2Nefi28',$page.props.auth.user)">28</button>
+    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black text-3xl lg:text-base font-bold rounded h-20 w-20 lg:h-10 lg:w-10 hover:text-xl" @click="selectReaderForUser('2Nefi29',$page.props.auth.user)">29</button>
+    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black text-3xl lg:text-base font-bold rounded h-20 w-20 lg:h-10 lg:w-10 hover:text-xl" @click="selectReaderForUser('2Nefi30',$page.props.auth.user)">30</button>
+    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black text-3xl lg:text-base font-bold rounded h-20 w-20 lg:h-10 lg:w-10 hover:text-xl" @click="selectReaderForUser('2Nefi31',$page.props.auth.user)">31</button>
+    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black text-3xl lg:text-base font-bold rounded h-20 w-20 lg:h-10 lg:w-10 hover:text-xl" @click="selectReaderForUser('2Nefi32',$page.props.auth.user)">32</button>
+    <button class="z-40 bg-blue-100 hover:bg-blue-200 text-black text-3xl lg:text-base font-bold rounded h-20 w-20 lg:h-10 lg:w-10 hover:text-xl" @click="selectReaderForUser('2Nefi33',$page.props.auth.user)">33</button>
   </div>
 </template>
 

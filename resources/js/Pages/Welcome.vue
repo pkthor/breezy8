@@ -11,7 +11,13 @@ defineProps({
 
 <template>
   <Head title="Alta voce" />
-
+  <meta property="og:title" content="The Rock" />
+  <meta property="og:type" content="video.movie" />
+  <meta property="og:url" content="https://www.imdb.com/title/tt0117500/" />
+  <meta
+    property="og:image"
+    content="https://ia.media-imdb.com/images/rock.jpg"
+  />
   <div
     class="
       bg-gradient-to-b
@@ -22,7 +28,7 @@ defineProps({
       min-h-screen
     "
   >
-    <div v-if="canLogin" class="fixed top-0 right-0 px-6 py-4 sm:block">
+    <div v-if="canLogin" class="fixed top-10 lg:top-0 right-0 px-6 py-4 lg:block ">
       <Link
         v-if="$page.props.auth.user"
         :href="route('dashboard')"
@@ -32,21 +38,21 @@ defineProps({
       </Link>
 
       <template v-else>
-        <Link :href="route('login')" class="text-sm text-gray-800 underline">
+        <Link :href="route('login')" class="text-3xl lg:text-base text-gray-800 underline">
           Accedi
         </Link>
 
         <Link
           v-if="canRegister"
           :href="route('register')"
-          class="ml-4 text-sm text-gray-800 underline"
+          class="ml-4 text-3xl lg:text-base text-gray-800 underline"
         >
           Registrati
         </Link>
       </template>
     </div>
     <div class="grid place-items-center">
-      <div class="h-6/12 w-6/12">
+      <div class="mt-20 lg:mt-0 h-5/6 w-5/6 lg:h-6/12 lg:w-6/12">
         <div>
           <svg
             version="1.1"
@@ -7636,10 +7642,10 @@ defineProps({
             </g>
           </svg>
         </div>
-        <div class="text-2xl font-bold mt-0">Libro di Mormon</div>
-        <div class="text-lg font-semibold">Alta voce</div>
-        <div class="mt-4 sm:p-2 p-0text-xxs object-bottom">
-          <p>
+        <div class="text-4xl lg:text-2xl font-bold mt-0">Libro di Mormon</div>
+        <div class="text-3xl lg:text-lg font-semibold">Alta voce</div>
+        <div class="mt-4 p-0 lg:p-2 p-0text-xxs object-bottom">
+          <p class="text-2xl lg:text-base">
             Realizzato con amore da membri italiani della Chiesa di Gesù Cristo
             dei Santi degli Ultimi Giorni. <br />Questo non è un prodotto
             ufficiale sponsorizzato della Chiesa, ma è stato creato dai membri

@@ -29,31 +29,31 @@ const submit = () => {
 
         <form @submit.prevent="submit">
             <div>
-                <BreezeLabel for="name" value="Nome" />
-                <BreezeInput id="name" type="text" class="mt-1 block w-full" v-model="form.name" required autofocus autocomplete="name" />
+                <BreezeLabel for="name" value="Nome" class="text-3xl lg:text-base"  />
+                <BreezeInput id="name" type="text" class="mt-1 block w-full text-2xl lg:text-base" v-model="form.name" required autofocus autocomplete="name" />
             </div>
 
             <div class="mt-4">
-                <BreezeLabel for="email" value="Email" />
-                <BreezeInput id="email" type="email" class="mt-1 block w-full" v-model="form.email" required autocomplete="username" />
+                <BreezeLabel for="email" value="Email" class="text-3xl lg:text-base"  />
+                <BreezeInput id="email" type="email" class="mt-1 block w-full text-2xl lg:text-base" v-model="form.email" required autocomplete="username" />
             </div>
 
             <div class="mt-4">
-                <BreezeLabel for="password" value="Password" />
-                <BreezeInput id="password" type="password" class="mt-1 block w-full" v-model="form.password" required autocomplete="new-password" />
+                <BreezeLabel for="password" value="Password" class="text-3xl lg:text-base"  />
+                <BreezeInput id="password" type="password" class="mt-1 block w-full text-2xl lg:text-base" v-model="form.password" required autocomplete="new-password" />
             </div>
 
             <div class="mt-4">
-                <BreezeLabel for="password_confirmation" value="Conferma Password" />
-                <BreezeInput id="password_confirmation" type="password" class="mt-1 block w-full" v-model="form.password_confirmation" required autocomplete="new-password" />
+                <BreezeLabel for="password_confirmation" value="Conferma Password" class="text-3xl lg:text-base"  />
+                <BreezeInput id="password_confirmation" type="password" class="mt-1 block w-full text-2xl lg:text-base" v-model="form.password_confirmation" required autocomplete="new-password" />
             </div>
 
             <div class="flex items-center justify-end mt-4">
-                <Link :href="route('login')" class="underline text-sm text-gray-600 hover:text-gray-900">
+                <Link :href="route('login')" class="underline  text-xl lg:text-base text-gray-600 hover:text-gray-900">
                     Già registrato?
                 </Link>
 
-                <BreezeButton class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+                <BreezeButton class="ml-4 text-xl lg:text-base" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
                     Registrati
                 </BreezeButton>
             </div>

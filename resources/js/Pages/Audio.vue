@@ -2,25 +2,25 @@
 
 <template>
     <!-- Main Audio 'card'.  -->
-  <div class="w-screen h-screen md:h-auto md:w-auto relative bg-gradient-to-b from-blue-400 to-blue-100 p-8 flex flex-col items-center rounded-lg drop-shadow-lg">
-    <div>
-      <p class="text-center text-xl font-bold">Il Libro di Mormon</p>
-      <p class="text-center text-md font-semibold mb-2">Ad alta voce</p>
+  <div class="w-screen h-screen lg:h-auto lg:w-auto relative bg-gradient-to-b from-blue-400 to-blue-100 p-8 flex flex-col items-center rounded-lg drop-shadow-lg">
+    <div class="text-center mt-8 lg:mt-2">
+      <p class="text-5xl lg:text-xl font-bold">Il Libro di Mormon</p>
+      <p class="text-2xl lg:text-lg font-semibold mb-2">Ad alta voce</p>
     </div>
     <img
-      class="rounded-full h-40 w-40"
+      class="rounded-full h-80 w-80 lg:h-40 lg:w-40"
       :src="currentImage"
       alt="narratorImageName no image"
     />
-    <div class="flex flex-col items-center mx-2 text-lg text-black font-bold">
+    <div class="flex flex-col items-center mt-4 mx-2 c text-4xl lg:text-lg text-black font-bold">
       {{ selectedReader.narrator }}
     </div>
-    <div class="flex flex-col items-center text-black text-base font-semibold">
+    <div class="flex flex-col items-center text-black text-3xl lg:text-lg font-semibold">
       {{ selectedReader.book }}
       {{ selectedReader.chapter }}
     </div>
     <div class="container">
-      <div class="flex justify-around mt-0 items-center mb-2">
+      <div class="flex justify-around mt-8 lg:mt-0 items-center mb-2 h-20">
         <button
           type="button"
           @click="prev"
@@ -48,25 +48,25 @@
           <icon name="next"></icon>
         </button>
       </div>
-      <div class="container mt-2 w-full">
+      <div class="container mt-4">
         <div
           class="
             relative
             container
             flex flex-col
             objects-center
-            mt-2
+            mt-4
           "
         >
-          <div class="flex flex-1 flex-col items-center space-x-1 mt-4">
+          <div class="flex flex-1 flex-col items-center space-x-1 mt-8 lg:mt-0">
             <input
               type="range"
               max="100"
               id="progressBar"
               v-model="audio.currentTime"
-              class="cursor-pointer"
+              class="cursor-pointer w-3/4"
             />
-            <div class="flex justify-between font-semibold">
+            <div class="flex justify-between font-semibold text-black text-3xl lg:text-lg mt-4">
               <span>{{ currentTimeTxt }} / {{ currentDurationTxt }}</span>
             </div>
           </div>

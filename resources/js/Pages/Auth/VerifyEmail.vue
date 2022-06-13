@@ -30,7 +30,7 @@ const verificationLinkSent = computed(() => props.status === 'verification-link-
         </div>
 
         <form @submit.prevent="submit">
-            <div class="mt-4 flex items-center justify-between">
+            <div class="mt-4 flex items-center justify-between text-xl lg:text-base">
                 <BreezeButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
                     Rinvia e-mail di verifica
                 </BreezeButton>
