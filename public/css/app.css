@@ -750,11 +750,14 @@ select {
 .ml-0 {
   margin-left: 0px;
 }
-.mt-1 {
-  margin-top: 0.25rem;
-}
 .mb-4 {
   margin-bottom: 1rem;
+}
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+.mt-1 {
+  margin-top: 0.25rem;
 }
 .ml-8 {
   margin-left: 2rem;
@@ -882,6 +885,9 @@ select {
 .w-80 {
   width: 20rem;
 }
+.w-40 {
+  width: 10rem;
+}
 .w-1\.5 {
   width: 0.375rem;
 }
@@ -972,6 +978,10 @@ select {
 }
 .list-none {
   list-style-type: none;
+}
+.columns-3 {
+  -moz-columns: 3;
+       columns: 3;
 }
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -1204,6 +1214,14 @@ select {
 .fill-current {
   fill: currentColor;
 }
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.object-center {
+  -o-object-position: center;
+     object-position: center;
+}
 .object-bottom {
   -o-object-position: bottom;
      object-position: bottom;
@@ -1266,13 +1284,13 @@ select {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
-.py-2\.5 {
-  padding-top: 0.625rem;
-  padding-bottom: 0.625rem;
-}
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
+}
+.py-2\.5 {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
 }
 .pt-8 {
   padding-top: 2rem;
@@ -1425,6 +1443,10 @@ select {
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+.text-red-800 {
+  --tw-text-opacity: 1;
+  color: rgb(153 27 27 / var(--tw-text-opacity));
 }
 .text-blue-800 {
   --tw-text-opacity: 1;
@@ -1956,12 +1978,12 @@ select {
     font-size: 1.125rem;
   }
 
-  .lg\:text-base {
-    font-size: 1rem;
-  }
-
   .lg\:text-2xl {
     font-size: 1.5rem;
+  }
+
+  .lg\:text-base {
+    font-size: 1rem;
   }
 
   .lg\:font-medium {

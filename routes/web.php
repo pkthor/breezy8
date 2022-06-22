@@ -45,3 +45,9 @@ Route::get('/reader', function () {
 })->middleware(['auth', 'verified'])->name('reader');
 
 require __DIR__.'/auth.php';
+
+Route::get('/history', function () {
+    return Inertia::render('History');
+})->middleware(['auth', 'verified'])->name('history');
+
+require __DIR__.'/auth.php';

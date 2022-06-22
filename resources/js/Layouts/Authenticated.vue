@@ -27,6 +27,11 @@ const showingNavigationDropdown = ref(false);
                                 </BreezeNavLink>
                             </div>
                             <div class="hidden space-x-8 lg:-my-px lg:ml-10 lg:flex">
+                                <BreezeNavLink :href="route('history')" :active="route().current('history')">
+                                    Storie di conversione
+                                </BreezeNavLink>
+                            </div>
+                            <div class="hidden space-x-8 lg:-my-px lg:ml-10 lg:flex">
                                 <BreezeNavLink :href="route('reader')" :active="route().current('reader')">
                                     FAQ
                                 </BreezeNavLink>
