@@ -69,16 +69,15 @@ function displayStory() {
 
   <BreezeAuthenticatedLayout>
     <template #header>
-      <h2 class="font-semibold text-3xl lg:text-xl text-red-800 leading-tight">
+      <h2 class="font-semibold text-3xl lg:text-xl text-gray-800 leading-tight">
         FAQ
       </h2>
     </template>
 
     <div class="py-12">
-      <div class="max-w-7xl mx-auto px-6 lg:px-8">
-        <div class="bg-white overflow-hidden shadow-sm lg:rounded-lg">
-          <div class="p-6 bg-blue-300 border-b border-gray-200">
-            <img class="object-center" src="assets/convImg/italia.jpg" alt="">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 ">
+        <div class="bg-white overflow-hidden shadow-sm lg:rounded-lg ">
+          <div class="p-6 bg-blue-300 border-b border-gray-200 ">
             <h1
               class="
                 font-semibold
@@ -86,11 +85,16 @@ function displayStory() {
                 lg:text-2xl
                 text-black
                 leading-tight
-                mb-4
+                mb-4 text-center
               "
             >
               Storie di conversione italiane
             </h1>
+            <div class="grid grid-cols-1 place-items-center mb-8">
+              <img class="" src="assets/convImg/italia.png" alt="">
+            </div>
+            
+            
             <ul class="columns-3">
               <li v-for="story in conversions" :key="story.uuid">
                 <button type="button" @click="displayStory">

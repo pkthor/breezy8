@@ -753,6 +753,9 @@ select {
 .mb-4 {
   margin-bottom: 1rem;
 }
+.mb-8 {
+  margin-bottom: 2rem;
+}
 .mb-6 {
   margin-bottom: 1.5rem;
 }
@@ -1218,10 +1221,6 @@ select {
   -o-object-fit: contain;
      object-fit: contain;
 }
-.object-center {
-  -o-object-position: center;
-     object-position: center;
-}
 .object-bottom {
   -o-object-position: bottom;
      object-position: bottom;
@@ -1443,10 +1442,6 @@ select {
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-.text-red-800 {
-  --tw-text-opacity: 1;
-  color: rgb(153 27 27 / var(--tw-text-opacity));
 }
 .text-blue-800 {
   --tw-text-opacity: 1;
