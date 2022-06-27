@@ -3,35 +3,34 @@ This page is for non authenticated users. It is a copy of Audio.vue
  -->
 
 <template>
-  <div class="absolute bg-gradient-to-b from-cyan-600 to-cyan-100 p-8">
-    <div>
-      <p class="text-center text-xl font-bold">Il Libro di Mormon</p>
-      <p class="text-center text-md font-semibold mb-2">Ad alta voce</p>
+    <!-- Main Audio 'card'.  -->
+  <div class="w-screen h-screen lg:h-auto lg:w-auto relative bg-gradient-to-b from-blue-400 to-blue-100 p-8 flex flex-col items-center rounded-lg drop-shadow-lg">
+    <div class="text-center mt-8 lg:mt-2">
+      <p class="text-5xl lg:text-xl font-bold">Il Libro di Mormon</p>
+      <p class="text-2xl lg:text-lg font-semibold mb-2">Ad alta voce</p>
     </div>
     <img
-      class="rounded-full h-52 w-52"
+      class="rounded-full h-80 w-80 lg:h-40 lg:w-40"
       :src="currentImage"
       alt="narratorImageName no image"
     />
-    <div class="flex flex-col items-center mx-2 text-lg text-black">
-      {{ selectedReader.narrator }} 
+    <div class="flex flex-col items-center mt-4 mx-2 c text-4xl lg:text-lg text-black font-bold">
+      {{ selectedReader.narrator }}
     </div>
-    <div class="flex flex-col items-center text-red-600 text-lg font-semibold">
+    <div class="flex flex-col items-center text-black text-3xl lg:text-lg font-semibold">
       {{ selectedReader.book }}
       {{ selectedReader.chapter }}
     </div>
     <div class="container">
-      <div class="flex justify-around mt-0 items-center">
+      <div class="flex justify-around mt-8 lg:mt-0 items-center mb-2 h-20">
         <button
           type="button"
-          class="transition w-4 h-4 mt-4 fill-current hover:fill-blue-600"
           @click="prev"
         >
           <icon name="prev"></icon>
         </button>
         <button
           type="button"
-          class="transition w-4 h-4 mt-4 fill-current hover:fill-blue-600"
           @click="play"
           v-if="!isPlaying"
         >
@@ -39,7 +38,6 @@ This page is for non authenticated users. It is a copy of Audio.vue
         </button>
         <button
           type="button"
-          class="transition w-4 h-4 mt-4 fill-current hover:fill-blue-600"
           @click="pause"
           v-else
         >
@@ -47,51 +45,33 @@ This page is for non authenticated users. It is a copy of Audio.vue
         </button>
         <button
           type="button"
-          class="transition w-4 h-4 mt-4 fill-current hover:fill-blue-600"
           @click="next"
         >
           <icon name="next"></icon>
         </button>
       </div>
-      <div class="container bg-yellow-100 mt-2 w-full">
+      <div class="container mt-4">
         <div
           class="
             relative
             container
             flex flex-col
-            bg-gradient-to-t
-            from-blue-600
-            to-blue-100
             objects-center
             mt-4
           "
         >
-          <div class="flex flex-1 flex-col items-center space-x-1 mt-4">
+          <div class="flex flex-1 flex-col items-center space-x-1 mt-8 lg:mt-0">
             <input
               type="range"
               max="100"
               id="progressBar"
               v-model="audio.currentTime"
-              class="cursor-pointer"
+              class="cursor-pointer w-3/4"
             />
-            <div class="flex justify-between font-semibold">
+            <div class="flex justify-between font-semibold text-black text-3xl lg:text-lg mt-4">
               <span>{{ currentTimeTxt }} / {{ currentDurationTxt }}</span>
             </div>
           </div>
-<!-- 
-          <div>
-            <p>
-              Realizzato con amore da membri italiani della
-              Chiesa di Gesù Cristo dei Santi degli Ultimi Giorni.
-
-              Questo non è un prodotto ufficiale sponsorizzato della Chiesa, ma è stato creato dai membri della Chiesa nel tentativo di fornire una versione audio del Libro di Mormon in italiano
-            </p>
-          </div>
-       -->
-
-
-
-
         </div>
       </div>
     </div>
@@ -102,6 +82,11 @@ This page is for non authenticated users. It is a copy of Audio.vue
 import { useReaderStore } from "../stores/Readers";
 import Tab2 from "./Tab2.vue";
 import { ref } from "vue";
+import axios from "axios";
+import { Inertia } from "@inertiajs/inertia";
+import { computed } from "vue";
+import { usePage } from "@inertiajs/inertia-vue3";
+
 export default {
   props: ["newReader"],
   data() {
@@ -113,13 +98,14 @@ export default {
       currentImage: "",
       progressBar: {},
       currentDuration: 0,
-      currentTime: (0),
-      currentTimeTxt: ("0:00"),
-      currentDurationTxt: ("0:00"),
-      index: 5,
+      currentTime: 0,
+      currentTimeTxt: "0:00",
+      currentDurationTxt: "0:00",
+      index: 5, //1 Nefi 1
       volume: 80,
       isMuted: false,
       isMaxed: false,
+      pictureHasChanged: false,
       selectedReader: useReaderStore(),
 
       readers: [
@@ -212,8 +198,8 @@ export default {
           bookID: 2,
           book: "1 Nefi",
           chapter: 3,
-          narrator: "Francesca Spatola",
-          narratorImageName: "FrancescaSpatola",
+          narrator: "Simon Bellini",
+          narratorImageName: "SimonBellini",
           chapterImageName: "1Nephi3",
           audioFileName: "1Nefi3",
           isActiveBookmark: false,
@@ -248,7 +234,7 @@ export default {
           bookID: 2,
           book: "1 Nefi",
           chapter: 6,
-          narrator: "Enrico Greico",
+          narrator: "Enrico Grieco",
           narratorImageName: "EnricoGreico",
           chapterImageName: "BOMpic",
           audioFileName: "1Nefi6",
@@ -272,8 +258,8 @@ export default {
           bookID: 2,
           book: "1 Nefi",
           chapter: 8,
-          narrator: "Cristina Perricone",
-          narratorImageName: "CristinaPerricone",
+          narrator: "Maurizio Ventura",
+          narratorImageName: "MaurizioVentura",
           chapterImageName: "1Nephi8",
           audioFileName: "1Nefi8",
           isActiveBookmark: false,
@@ -332,7 +318,7 @@ export default {
           bookID: 2,
           book: "1 Nefi",
           chapter: 13,
-          narrator: "Maria Murgia",
+          narrator: "Maria Chiara Murgia",
           narratorImageName: "MariaMurgia",
           chapterImageName: "1Nephi13",
           audioFileName: "1Nefi13",
@@ -656,8 +642,8 @@ export default {
           bookID: 3,
           book: "2 Nefi",
           chapter: 18,
-          narrator: "Giulia Redaelli",
-          narratorImageName: "GiuliaRedaelli",
+          narrator: "Paolo Conforte",
+          narratorImageName: "PaoloConforte",
           chapterImageName: "BOMpic",
           audioFileName: "2Nefi18",
           isActiveBookmark: false,
@@ -668,8 +654,8 @@ export default {
           bookID: 3,
           book: "2 Nefi",
           chapter: 19,
-          narrator: "Teresa Saieva",
-          narratorImageName: "TeresaSaieva",
+          narrator: "Carmelo Persico",
+          narratorImageName: "CarmeloPersico",
           chapterImageName: "BOMpic",
           audioFileName: "2Nefi19",
           isActiveBookmark: false,
@@ -776,8 +762,8 @@ export default {
           bookID: 3,
           book: "2 Nefi",
           chapter: 28,
-          narrator: "Davide Dicarolo",
-          narratorImageName: "DavideDicarolo",
+          narrator: "Anna Maria Maniscalco",
+          narratorImageName: "AnnaMariaManiscalco",
           chapterImageName: "BOMpic",
           audioFileName: "2Nefi28",
           isActiveBookmark: false,
@@ -1208,8 +1194,8 @@ export default {
           bookID: 9,
           book: "Mosia",
           chapter: 20,
-          narrator: "Marianna Pastano",
-          narratorImageName: "MariannaPastano",
+          narrator: "Alessandra Balestra Sorgiacomo",
+          narratorImageName: "AlessandraBalestraSorgiacomo",
           chapterImageName: "BOMpic",
           audioFileName: "Mosia20",
           isActiveBookmark: false,
@@ -1436,7 +1422,7 @@ export default {
           bookID: 10,
           book: "Alma",
           chapter: 10,
-          narrator: "Maria Murgia",
+          narrator: "Maria Chiara Murgia",
           narratorImageName: "MariaMurgia",
           chapterImageName: "BOMpic",
           audioFileName: "Alma10",
@@ -1664,8 +1650,8 @@ export default {
           bookID: 10,
           book: "Alma",
           chapter: 29,
-          narrator: "Miriam Bressan",
-          narratorImageName: "MiriamBressan",
+          narrator: "Nicola Virgilio",
+          narratorImageName: "NicolaVirgilio",
           chapterImageName: "BOMpic",
           audioFileName: "Alma29",
           isActiveBookmark: false,
@@ -1688,8 +1674,8 @@ export default {
           bookID: 10,
           book: "Alma",
           chapter: 31,
-          narrator: "Morgan Tonon",
-          narratorImageName: "MorganTonon",
+          narrator: "Davide Giugliarelli",
+          narratorImageName: "DavideGiugliarelli",
           chapterImageName: "Alma31",
           audioFileName: "Alma31",
           isActiveBookmark: false,
@@ -2024,8 +2010,8 @@ export default {
           bookID: 10,
           book: "Alma",
           chapter: 59,
-          narrator: "Letizia Furia",
-          narratorImageName: "LetiziaFuria",
+          narrator: "Elvira Casolin",
+          narratorImageName: "ElviraCasolin",
           chapterImageName: "BOMpic",
           audioFileName: "Alma59",
           isActiveBookmark: false,
@@ -2072,8 +2058,8 @@ export default {
           bookID: 10,
           book: "Alma",
           chapter: 63,
-          narrator: "Francesca Di Ruscio",
-          narratorImageName: "FrancescaDiRuscio",
+          narrator: "Giovanna Galle",
+          narratorImageName: "GiovannaGalle",
           chapterImageName: "BOMpic",
           audioFileName: "Alma63",
           isActiveBookmark: false,
@@ -2108,8 +2094,8 @@ export default {
           bookID: 11,
           book: "Helaman",
           chapter: 3,
-          narrator: "Daniele Benigni",
-          narratorImageName: "DanieleBenigni",
+          narrator: "Stefania Furia",
+          narratorImageName: "StefaniaFuria",
           chapterImageName: "BOMpic",
           audioFileName: "Helaman3",
           isActiveBookmark: false,
@@ -2204,8 +2190,8 @@ export default {
           bookID: 11,
           book: "Helaman",
           chapter: 11,
-          narrator: "Mara Bartolucci",
-          narratorImageName: "MaraBartolucci",
+          narrator: "Isabella Persico",
+          narratorImageName: "IsabellaPersico",
           chapterImageName: "BOMpic",
           audioFileName: "Helaman11",
           isActiveBookmark: false,
@@ -2648,8 +2634,8 @@ export default {
           bookID: 14,
           book: "Mormon",
           chapter: 1,
-          narrator: "Cristiana Baldassi",
-          narratorImageName: "CristianaBaldassi",
+          narrator: "Fabio Nannarone",
+          narratorImageName: "FabioNannarone",
           chapterImageName: "Mormon1",
           audioFileName: "Mormon1",
           isActiveBookmark: false,
@@ -3020,8 +3006,8 @@ export default {
           bookID: 16,
           book: "Moroni",
           chapter: 8,
-          narrator: "Riccardo Vanoli",
-          narratorImageName: "RiccardoVanoli",
+          narrator: "Shainah Dioquino",
+          narratorImageName: "ShainahDioquino",
           chapterImageName: "BOMpic",
           audioFileName: "Moroni8",
           isActiveBookmark: false,
@@ -3056,11 +3042,13 @@ export default {
   },
   beforeUpdate() {
     this.currentImage = "./assets/photos/" + this.selectedReader.narratorImageName + ".jpg";
-  },
-  updated() {
+    this.index = this.selectedReader.uuid - 1; //reset the index
   },
   mounted() {
-    this.currentImage = "./assets/photos/" + this.selectedReader.narratorImageName + ".jpg";
+    this.determineUserAndReader();
+    this.currentImage =
+      "./assets/photos/" + this.selectedReader.narratorImageName + ".jpg";
+    this.index = this.selectedReader.uuid - 1;
     this.audio.src = this.selectedReader.src;
     this.audio.volume = this.volume / 100;
     this.progressBar = document.querySelector("#progressBar");
@@ -3068,10 +3056,20 @@ export default {
     this.initProgress();
   },
   methods: {
+    determineUserAndReader() {
+      const user1 = usePage().props.value.auth.user;
+      const theReader = this.readers.filter(
+        (reader) => reader.uuid === user1.uuid
+      );
+      this.updateSelectedReader(theReader[0]);
+    },
     initProgress() {
       this.audio.addEventListener("loadedmetadata", () => {
         this.currentDuration = this.audio.duration;
-        let secs = `${parseInt(`${this.currentDuration % 60}`, 10)}`.padStart(2,"0");
+        let secs = `${parseInt(`${this.currentDuration % 60}`, 10)}`.padStart(
+          2,
+          "0"
+        );
         let mins = parseInt(`${(this.currentDuration / 60) % 60}`, 10);
         this.currentDurationTxt = `${mins}:${secs}`;
         this.progressBar.max = this.currentDuration;
@@ -3110,15 +3108,17 @@ export default {
       this.audio.volume = this.volume / 100;
     },
     play(reader) {
+      // ????????
+      // If the current image has changed, stop playing
+      // => Trying to stop play when menu has selected a new reader
+
       if (typeof reader.src != "undefined") {
         this.audio.src = this.selectedReader.src;
-        console.log("Play this.audio.src:", this.audio.src);
       }
       this.audio.src = this.selectedReader.src;
       this.index = this.selectedReader.uuid - 1;
       this.audio.play();
       this.isPlaying = true;
-      console.log("Play this.selectedReader.src:", this.selectedReader.src);
     },
     pause() {
       // console.log("pause");
@@ -3128,18 +3128,30 @@ export default {
     next() {
       this.index++; //index is the location in readers array. It is equal to uuid-1.
       this.index > this.readers.length - 1 ? (this.index = 5) : this.index; //returns to 1 Nefi 1
-      this.updateSelectedReader(this.readers[this.index])
+      this.updateSelectedReader(this.readers[this.index]);
       this.play(this.selectedReader.src);
-      this.currentImage = "assets/photos/" + this.selectedReader.narratorImageName + ".jpg";
+      this.currentImage =
+        "assets/photos/" + this.selectedReader.narratorImageName + ".jpg";
+      // console.log("The current selected reader uuid is:",this.selectedReader.uuid)
+      const user1 = usePage().props.value.auth.user;
+      axios.put(
+        route("reader", { uuid: this.selectedReader.uuid, user_id: user1.id })
+      );
     },
     prev() {
       this.index--;
       this.index < 0 ? (this.index = 5) : this.index; //returns to 1 Nefi 1
-      this.updateSelectedReader(this.readers[this.index])
+      this.updateSelectedReader(this.readers[this.index]);
       this.play(this.selectedReader.src);
-      this.currentImage = "assets/photos/" + this.selectedReader.narratorImageName + ".jpg";
+      this.currentImage =
+        "assets/photos/" + this.selectedReader.narratorImageName + ".jpg";
+      const user1 = usePage().props.value.auth.user;
+      axios.put(
+        route("reader", { uuid: this.selectedReader.uuid, user_id: user1.id })
+      );
     },
-    updateSelectedReader(reader) { //not sure why this is necessary, as this.selectedReader = reader should work, but it does not.
+    updateSelectedReader(reader) {
+      //not sure why this is necessary, as this.selectedReader = reader should work, but it does not.
       this.selectedReader.uuid = reader.uuid;
       this.selectedReader.bookID = reader.bookID;
       this.selectedReader.book = reader.book;
@@ -3150,8 +3162,7 @@ export default {
       this.selectedReader.audioFileName = reader.audioFileName;
       this.selectedReader.isActiveBookmark = reader.isActiveBookmark;
       this.selectedReader.src = reader.src;
-
-    }
+    },
   },
 };
 </script>
