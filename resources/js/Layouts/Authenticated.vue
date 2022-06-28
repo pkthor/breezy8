@@ -59,6 +59,9 @@ const showingNavigationDropdown = ref(false);
                                         <BreezeDropdownLink :href="route('reader')" method="get" as="button" >
                                             FAQ
                                         </BreezeDropdownLink>
+                                        <BreezeDropdownLink :href="route('history')" method="get" as="button" >
+                                            Storie di conversione
+                                        </BreezeDropdownLink>
                                         <BreezeDropdownLink :href="route('logout')" method="post" as="button">
                                             Esci
                                         </BreezeDropdownLink>
@@ -87,6 +90,11 @@ const showingNavigationDropdown = ref(false);
                         </BreezeResponsiveNavLink>
                     </div>
                     <div class="pt-2 pb-3 space-y-1">
+                        <BreezeResponsiveNavLink class="text-3xl" :href="route('history')" :active="route().current('history')">
+                            Storie di conversione
+                        </BreezeResponsiveNavLink>
+                    </div>
+                    <div class="pt-2 pb-3 space-y-1">
                         <BreezeResponsiveNavLink class="text-3xl" :href="route('reader')" :active="route().current('reader')">
                             FAQ
                         </BreezeResponsiveNavLink>
@@ -107,13 +115,6 @@ const showingNavigationDropdown = ref(false);
                     </div>
                 </div>
             </nav>
-
-            <!-- Page Heading -->
-            <!-- <header class="bg-white shadow" v-if="$slots.header">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    <slot name="header" />
-                </div>
-            </header> -->
 
             <!-- Page Content. Audio.vue -->
             <main>

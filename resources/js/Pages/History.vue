@@ -122,7 +122,7 @@ var conversions = [
     location: "Spacely's Sprockets",
     year: 1997,
     src: "assets/convImg/ElvyBertuletti.jpg",
-    storyTextItalian:"<b>Storia di una conversione - Bertuletti Elvy</b><p>Nell'estate del 1974 ero sposata da un anno e aspettavo la nostra prima bambina, ero in congedo per maternità, per questo una mattina quando hanno suonato alla porta due ragazzi, hanno potuto trovarmi in casa.  Non ricordo di cosa abbiano parlato, ma ricordo che  mi hanno regalato un libro con la copertina blu.  Si chiamava 'Libro di Mormon' che ho messo tra altri libri nella nostra libreria.<p>Dopo alcuni mesi, nel frattempo è nata Eva, sono tornati altri due ragazzi e hanno chiesto di poter fissare un appuntamento per poter parlare quando ci fosse stato anche mio marito.  In questo modo abbiamo saputo che erano due ragazzi in missione.  Ci hanno parlato di Gesù Cristo, del suo Vangelo, e della visione  che un ragazzo ebbe di Dio padre e Gesù Cristo in un bosco negli Stati Uniti.  Mio marito Beppe, era sempre più interessato e incuriosito a que!lo che i missionari raccontavano.  Io sempre un po' meno.<p>Tra la fine degli anni 60 e i primi anni 70, ero stata una studentessa contestatrice  anche contro l'imperialismo statunitense, contro la guerra in Vietnam, per cui non potevo nemmeno pensare che venisse qualcosa di buono dagli Stati Uniti.  Raramente mi trattenevo ad ascoltare i colloqui dei missionari, ma alcune volte su insistenza di Beppe, lo facevo.<p>Quando ascoltavo i principi del vangelo, avevo l'impressione di averli già conosciuti e mi apparivano come tessere di un puzzle che si stavano ricomponendo in un disegno familiare.<p>Una notte sognai che suonava il campanello della porta di casa nostra, andai ad aprire e trovai diverse persone vestite di bianco che feci entrare in casa.  Si disposero in soggiorno  tutte intorno a me in diverse file lungo il perimetro. Un pensiero si formulò nella mia mente: 'Adesso ci credi?'  Ero certa che quelle persone avevano già passato il velo e che facevamo parte della mia famiglia.<p>Quel sogno che ancora oggi ricordo in modo nitido, mi indusse a pregare per sapere da me stessa tramite una rivelazione, se fosse giusto battezzarmi in una Chiesa di cui non avevo mai sentito parlare.  Il mio scetticismo mi impediva di essere serena nella decisione, nonostante avessi delle piccole certezze.<p>Decisi di battezzarmi, pensando che il Signore mi stava dando un'opportunità che magari non si sarebbe ripetuta, e che se nel tempo avessi realizzato che non fosse la sua vera Chiesa, avrei potuto sempre tornare sui miei passi.  Mi sono unita alla Chiesa di Gesù Cristo dei Santi degli Ultimi Giorni l'11 gennaio 1975.  L'anno successivo nel mese di maggio, mio marito ed io ci siamo sposati nel tempio di Berna e suggellato a noi la nostra Eva di un anno e mezzo.<p>Ancora oggi, dopo tanto anni, ho un dono che considero prezioso: la mia testimonianza.",
+    storyTextItalian:"<b>Storia di una conversione - Elvy Bertuletti</b><p>Nell'estate del 1974 ero sposata da un anno e aspettavo la nostra prima bambina, ero in congedo per maternità, per questo una mattina quando hanno suonato alla porta due ragazzi, hanno potuto trovarmi in casa.  Non ricordo di cosa abbiano parlato, ma ricordo che  mi hanno regalato un libro con la copertina blu.  Si chiamava 'Libro di Mormon' che ho messo tra altri libri nella nostra libreria.<p>Dopo alcuni mesi, nel frattempo è nata Eva, sono tornati altri due ragazzi e hanno chiesto di poter fissare un appuntamento per poter parlare quando ci fosse stato anche mio marito.  In questo modo abbiamo saputo che erano due ragazzi in missione.  Ci hanno parlato di Gesù Cristo, del suo Vangelo, e della visione  che un ragazzo ebbe di Dio padre e Gesù Cristo in un bosco negli Stati Uniti.  Mio marito Beppe, era sempre più interessato e incuriosito a que!lo che i missionari raccontavano.  Io sempre un po' meno.<p>Tra la fine degli anni 60 e i primi anni 70, ero stata una studentessa contestatrice  anche contro l'imperialismo statunitense, contro la guerra in Vietnam, per cui non potevo nemmeno pensare che venisse qualcosa di buono dagli Stati Uniti.  Raramente mi trattenevo ad ascoltare i colloqui dei missionari, ma alcune volte su insistenza di Beppe, lo facevo.<p>Quando ascoltavo i principi del vangelo, avevo l'impressione di averli già conosciuti e mi apparivano come tessere di un puzzle che si stavano ricomponendo in un disegno familiare.<p>Una notte sognai che suonava il campanello della porta di casa nostra, andai ad aprire e trovai diverse persone vestite di bianco che feci entrare in casa.  Si disposero in soggiorno  tutte intorno a me in diverse file lungo il perimetro. Un pensiero si formulò nella mia mente: 'Adesso ci credi?'  Ero certa che quelle persone avevano già passato il velo e che facevamo parte della mia famiglia.<p>Quel sogno che ancora oggi ricordo in modo nitido, mi indusse a pregare per sapere da me stessa tramite una rivelazione, se fosse giusto battezzarmi in una Chiesa di cui non avevo mai sentito parlare.  Il mio scetticismo mi impediva di essere serena nella decisione, nonostante avessi delle piccole certezze.<p>Decisi di battezzarmi, pensando che il Signore mi stava dando un'opportunità che magari non si sarebbe ripetuta, e che se nel tempo avessi realizzato che non fosse la sua vera Chiesa, avrei potuto sempre tornare sui miei passi.  Mi sono unita alla Chiesa di Gesù Cristo dei Santi degli Ultimi Giorni l'11 gennaio 1975.  L'anno successivo nel mese di maggio, mio marito ed io ci siamo sposati nel tempio di Berna e suggellato a noi la nostra Eva di un anno e mezzo.<p>Ancora oggi, dopo tanto anni, ho un dono che considero prezioso: la mia testimonianza.",
     storyTextEnglish: "English text here",
   },
   {
@@ -270,14 +270,14 @@ function resetPage() {
 
   <BreezeAuthenticatedLayout>
     <template #header>
-      <h2 class="font-semibold text-3xl lg:text-xl text-gray-800 leading-tight">
-        FAQ
+      <h2 class="font-semibold text-3xl lg:text-xl text-black leading-tight mb-4">
+        Storie di conversione italiane
       </h2>
     </template>
 
     <div class="py-12">
       <div class="max-w-7xl mx-auto px-6 lg:px-8">
-        <div class="bg-blue-300 overflow-hidden shadow-sm lg:rounded-lg">
+        <div class="bg-red-300 overflow-hidden shadow-sm lg:rounded-lg">
           <div
             v-if="listIsOpen"
             class="p-6 bg-blue-300 border-b border-red-500"
@@ -302,6 +302,7 @@ function resetPage() {
             <ul class="columns-3">
               <li v-for="story in conversions" :key="story.uuid">
                 <button
+                  class="font-semibold text-2xl lg:text-xl text-black leading-tigh m-auto"
                   type="button"
                   @click="
                     displayStory(story.name, story.storyTextItalian, story.src)
@@ -309,17 +310,14 @@ function resetPage() {
                 >
                   <!-- image is the button -->
                   <img
-                    class="w-40 h-40 lg:h-40 lg:w-30 object-contain"
+                    class="w-40 h-40 lg:h-40 lg:w-30 object-contain my-2 pt-4"
                     :src="story.src"
                     alt="italia"
+                    
                   />
+                    {{ story.name }}
                 </button>
-                <p class="mb-6">
-                  {{ story.name }}
-                </p>
-                <!-- <p>
-                  <span v-html="story.storyTextEnglish"></span>
-                </p> -->
+                
               </li>
             </ul>
           </div>
@@ -342,7 +340,7 @@ function resetPage() {
               class="
                 font-semibold
                 text-3xl
-                lg:text-2xl
+                lg:text-xl
                 text-black
                 leading-tight
                 mb-4
@@ -354,9 +352,8 @@ function resetPage() {
             <img
               class="
                 float-left
-                w-40
-                h-40
-                lg:h-80 lg:w-80
+                w-80
+                h-80
                 object-contain
                 px-6
                 bg-blue-300
@@ -365,7 +362,7 @@ function resetPage() {
               alt="image"
             />
 
-            <p class="ml-4">
+            <p class="ml-4 font-semibold text-3xl lg:text-xl text-black leading-tight m-auto">
               <span v-html="selectedStory"></span>
             </p>
           </div>
