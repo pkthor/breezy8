@@ -1,7 +1,7 @@
 <script setup>
 import BreezeAuthenticatedLayout from "@/Layouts/Authenticated.vue";
 import { Head } from "@inertiajs/inertia-vue3";
-import { ref, computed } from "vue";
+import { ref, computed,reactive } from "vue";
 import conversions2 from "../stores/conversions2.js";
 
 const isItalian = ref(true);
@@ -26,21 +26,17 @@ function resetPage() {
   storyIsOpen.value = false;
   listIsOpen.value = true;
 }
-// a computed ref
-const swapStories = computed(() => {
-  var temp = selectedStory;
-  selectedStory.value = unSelectedStory;
-  unSelectedStory.value = temp;
 
-})
 function useOtherVersion() {
   console.log("useOtherVersion. Selected Story: ", selectedStory);
   console.log("useOtherVersion. Unselected Story: ", unSelectedStory);
   storyIsOpen.value = true;
-  isItalian.value = !isItalian;
-  swapStories();
-  console.log("swapped. Selected Story: ", selectedStory);
-  console.log("swapped. Unselected Story: ", unSelectedStory);
+  isItalian.value = !isItalian.value;
+  const temp = selectedStory.value;
+  selectedStory.value = unSelectedStory.value;
+  unSelectedStory.value = temp;
+  console.log("swapped. Selected Story1: ", selectedStory.value);
+  console.log("swapped. Unselected Story2: ", unSelectedStory.value);
 }
 
 const page = ref(1);
@@ -281,7 +277,7 @@ const goToPage = (numPage) => {
             class="pb-6 bg-blue-300 border-b border-gray-200"
           >
             <!-- Show the English flag -->
-            <div class="flex flex-row justify-between mx-4 mt-2">
+            <div class="flex flex-row justify-between mx-6 mt-4">
               <div>
                 <button type="button" @click="resetPage">
                   <svg
@@ -439,13 +435,13 @@ const goToPage = (numPage) => {
                 </button>
               </div>
               <div v-if="isItalian">
-                <button class="" type="button" @click="useOtherVersion()">
+                <button class="h-12 w-12" type="button" @click="useOtherVersion()">
                   <img src="/assets/convImg/flagUS.png" alt="US flag" />
                   English
                 </button>
               </div>
               <div v-else>
-                <button class="" type="button" @click="useOtherVersion()">
+                <button class="h-12 w-12" type="button" @click="useOtherVersion()">
                   <img src="/assets/convImg/flagIT.png" alt="US flag" />
                   Italiano
                 </button>
