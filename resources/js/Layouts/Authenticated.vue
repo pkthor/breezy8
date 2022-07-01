@@ -27,6 +27,11 @@ const showingNavigationDropdown = ref(false);
                                 </BreezeNavLink>
                             </div>
                             <div class="hidden space-x-8 lg:-my-px lg:ml-10 lg:flex">
+                                <BreezeNavLink :href="route('history2')" :active="route().current('history2')">
+                                    Storie di conversione2
+                                </BreezeNavLink>
+                            </div>
+                            <div class="hidden space-x-8 lg:-my-px lg:ml-10 lg:flex">
                                 <BreezeNavLink :href="route('history')" :active="route().current('history')">
                                     Storie di conversione
                                 </BreezeNavLink>
@@ -59,6 +64,9 @@ const showingNavigationDropdown = ref(false);
                                         <BreezeDropdownLink :href="route('reader')" method="get" as="button" >
                                             FAQ
                                         </BreezeDropdownLink>
+                                        <BreezeDropdownLink :href="route('history2')" method="get" as="button" >
+                                            Storie di conversione2
+                                        </BreezeDropdownLink>
                                         <BreezeDropdownLink :href="route('history')" method="get" as="button" >
                                             Storie di conversione
                                         </BreezeDropdownLink>
@@ -90,7 +98,12 @@ const showingNavigationDropdown = ref(false);
                         </BreezeResponsiveNavLink>
                     </div>
                     <div class="pt-2 pb-3 space-y-1">
-                        <BreezeResponsiveNavLink class="text-3xl" :href="route('history')" :active="route().current('history')">
+                        <BreezeResponsiveNavLink class="text-3xl" :href="route('history')" :active="route().current('history2')">
+                            Storie di conversione2
+                        </BreezeResponsiveNavLink>
+                    </div>
+                    <div class="pt-2 pb-3 space-y-1">
+                        <BreezeResponsiveNavLink class="text-3xl" :href="route('history2')" :active="route().current('history')">
                             Storie di conversione
                         </BreezeResponsiveNavLink>
                     </div>
