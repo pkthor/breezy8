@@ -51,8 +51,8 @@ Route::get('/history', function () {
 })->middleware(['auth', 'verified'])->name('history');
 
 require __DIR__.'/auth.php';
-Route::get('/history2', function () {
-    return Inertia::render('History2');
-})->middleware(['auth', 'verified'])->name('history2');
+// Route::get('/history2', function () {
+//     return Inertia::render('History2');
+// })->middleware(['auth', 'verified'])->name('history2');
 
-require __DIR__.'/auth.php';
+// require __DIR__.'/auth.php';

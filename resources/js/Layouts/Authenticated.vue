@@ -16,7 +16,7 @@ const showingNavigationDropdown = ref(false);
         <div class="min-h-screen w-auto h-auto bg-blue-200">
             <nav class="bg-blue-300 border-b border-gray-100">
                 <!-- Primary Navigation Menu -->
-                <div class="max-w-7xl mx-auto px-4 lg:px-6 lg:px-8">
+                <div class="max-w-7xl mx-auto px-4 lg:px-8">
                     <div class="flex justify-between h-16 lg:h-12">
                         <div class="flex">
 
@@ -26,11 +26,11 @@ const showingNavigationDropdown = ref(false);
                                     Libro di Mormon
                                 </BreezeNavLink>
                             </div>
-                            <div class="hidden space-x-8 lg:-my-px lg:ml-10 lg:flex">
+                            <!-- <div class="hidden space-x-8 lg:-my-px lg:ml-10 lg:flex">
                                 <BreezeNavLink :href="route('history2')" :active="route().current('history2')">
                                     Storie di conversione2
                                 </BreezeNavLink>
-                            </div>
+                            </div> -->
                             <div class="hidden space-x-8 lg:-my-px lg:ml-10 lg:flex">
                                 <BreezeNavLink :href="route('history')" :active="route().current('history')">
                                     Storie di conversione
@@ -64,9 +64,9 @@ const showingNavigationDropdown = ref(false);
                                         <BreezeDropdownLink :href="route('reader')" method="get" as="button" >
                                             FAQ
                                         </BreezeDropdownLink>
-                                        <BreezeDropdownLink :href="route('history2')" method="get" as="button" >
+                                        <!-- <BreezeDropdownLink :href="route('history2')" method="get" as="button" >
                                             Storie di conversione2
-                                        </BreezeDropdownLink>
+                                        </BreezeDropdownLink> -->
                                         <BreezeDropdownLink :href="route('history')" method="get" as="button" >
                                             Storie di conversione
                                         </BreezeDropdownLink>
@@ -97,13 +97,13 @@ const showingNavigationDropdown = ref(false);
                             Libro di Mormon
                         </BreezeResponsiveNavLink>
                     </div>
-                    <div class="pt-2 pb-3 space-y-1">
-                        <BreezeResponsiveNavLink class="text-3xl" :href="route('history')" :active="route().current('history2')">
+                    <!-- <div class="pt-2 pb-3 space-y-1">
+                        <BreezeResponsiveNavLink class="text-3xl" :href="route('history2')" :active="route().current('history2')">
                             Storie di conversione2
                         </BreezeResponsiveNavLink>
-                    </div>
+                    </div> -->
                     <div class="pt-2 pb-3 space-y-1">
-                        <BreezeResponsiveNavLink class="text-3xl" :href="route('history2')" :active="route().current('history')">
+                        <BreezeResponsiveNavLink class="text-3xl" :href="route('history')" :active="route().current('history')">
                             Storie di conversione
                         </BreezeResponsiveNavLink>
                     </div>
