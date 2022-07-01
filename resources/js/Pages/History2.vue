@@ -8,8 +8,8 @@ const isItalian = ref(true);
 const listIsOpen = ref(true);
 const storyIsOpen = ref(false);
 const selectedName = ref("");
-const selectedStory = ref("");
-const unSelectedStory = ref("");
+var selectedStory = ref("");
+var unSelectedStory = ref("");
 const selectedSrcPhoto = ref("");
 const flagSrc = ref("/assets/convImg/flagUS.png");
 
@@ -26,16 +26,21 @@ function resetPage() {
   storyIsOpen.value = false;
   listIsOpen.value = true;
 }
-function useOtherVersion() {
-  storyIsOpen.value = true;
-  isItalian.value = !isItalian;
-  flagSrc.value = isItalian
-    ? "/assets/convImg/flagUS.png"
-    : "/assets/convImg/flagIT.png";
-  let temp = selectedStory;
+// a computed ref
+const swapStories = computed(() => {
+  var temp = selectedStory;
   selectedStory.value = unSelectedStory;
   unSelectedStory.value = temp;
-  console.log("language switched");
+
+})
+function useOtherVersion() {
+  console.log("useOtherVersion. Selected Story: ", selectedStory);
+  console.log("useOtherVersion. Unselected Story: ", unSelectedStory);
+  storyIsOpen.value = true;
+  isItalian.value = !isItalian;
+  swapStories();
+  console.log("swapped. Selected Story: ", selectedStory);
+  console.log("swapped. Unselected Story: ", unSelectedStory);
 }
 
 const page = ref(1);
@@ -433,11 +438,16 @@ const goToPage = (numPage) => {
                   Ritorno
                 </button>
               </div>
-              <div>
+              <div v-if="isItalian">
                 <button class="" type="button" @click="useOtherVersion()">
-                  <!-- <img src="/assets/convImg/flagUS.png" alt="US flag" /> -->
-                  <img src="flagSrc" alt="US flag" />
+                  <img src="/assets/convImg/flagUS.png" alt="US flag" />
                   English
+                </button>
+              </div>
+              <div v-else>
+                <button class="" type="button" @click="useOtherVersion()">
+                  <img src="/assets/convImg/flagIT.png" alt="US flag" />
+                  Italiano
                 </button>
               </div>
             </div>
