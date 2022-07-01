@@ -39,7 +39,7 @@ const page = ref(1);
 
 const data2 = Array.from(conversions);
 
-const perPage = 9;
+const perPage = 12;
 
 const paginatedData = computed(() =>
   data2.slice((page.value - 1) * perPage, page.value * perPage)
@@ -93,7 +93,7 @@ const goToPage = (numPage) => {
                 text-center
               "
             >
-              Storie di conversione italiane2
+              Storie di conversione italiane
             </h1>
             <div class="grid grid-cols-1 place-items-center mb-8">
               <div>
