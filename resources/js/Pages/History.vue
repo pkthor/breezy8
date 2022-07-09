@@ -74,7 +74,7 @@ const goToPage = (numPage) => {
       <h2
         class="font-semibold text-3xl lg:text-xl text-black leading-tight mb-4"
       >
-        Storie di conversione italiane2
+        Storie di conversione italiane
       </h2>
     </template>
 
@@ -96,7 +96,6 @@ const goToPage = (numPage) => {
               Storie di conversione italiane
             </h1>
             <div class="grid grid-cols-1 place-items-center mb-8">
-              <div>
                 <!-- James' custom design -->
                 <svg
                   width="261"
@@ -233,11 +232,10 @@ const goToPage = (numPage) => {
                     fill="#011F29"
                   />
                 </svg>
-              </div>
             </div>
             <!-- Show the list view -->
-            <ul class="columns-3">
-              <li v-for="story in paginatedData" :key="story.uuid">
+            <ul class="grid grid-cols-3 place-items-center">
+              <li v-for="story in paginatedData" :key="story.uuid" class="grid place-items-center">
                 <button
                   class="
                     font-semibold
@@ -246,6 +244,8 @@ const goToPage = (numPage) => {
                     text-black
                     leading-tight
                     m-auto
+                    grid
+                    place-items-center
                   "
                   type="button"
                   @click="
