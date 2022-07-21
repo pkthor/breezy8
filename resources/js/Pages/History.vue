@@ -491,6 +491,7 @@ const goToPage = (numPage) => {
                 text-black
                 leading-tight
                 m-auto
+                p-6
               "
             >
               <span v-html="selectedStory"></span>
@@ -518,7 +519,7 @@ const goToPage = (numPage) => {
             "
             @click="backPage"
           >
-            prev
+            Indtr
           </button>
           <button
             type="button"
@@ -560,7 +561,7 @@ const goToPage = (numPage) => {
             "
             @click="nextPage"
           >
-            next
+            Avnt
           </button>
         </div>
       </div>
