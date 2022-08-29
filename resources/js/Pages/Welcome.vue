@@ -53,7 +53,8 @@ defineProps({
     </div>
     <div class="grid place-items-center">
       <div class="mt-20 lg:mt-0 h-5/6 w-5/6 lg:h-6/12 lg:w-6/12">
-        <div>
+        <icon name="christus2"></icon>
+        <!-- <div>
           <svg
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
@@ -7641,8 +7642,8 @@ defineProps({
               </g>
             </g>
           </svg>
-        </div>
-        <div class="text-4xl lg:text-2xl font-bold mt-0">Libro di Mormon</div>
+        </div> -->
+        <div class="text-4xl lg:text-2xl font-bold mt-6">Libro di Mormon</div>
         <div class="text-3xl lg:text-lg font-semibold">Alta voce</div>
         <div class="mt-4 p-0 lg:p-2 p-0text-xxs object-bottom">
           <p class="text-2xl lg:text-base">

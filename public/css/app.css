@@ -734,6 +734,9 @@ select {
 .-mt-px {
   margin-top: -1px;
 }
+.mt-20 {
+  margin-top: 5rem;
+}
 .mt-3 {
   margin-top: 0.75rem;
 }
@@ -772,9 +775,6 @@ select {
 }
 .ml-60 {
   margin-left: 15rem;
-}
-.mt-20 {
-  margin-top: 5rem;
 }
 .mt-0 {
   margin-top: 0px;
@@ -1870,6 +1870,10 @@ select {
     margin-bottom: -1px;
   }
 
+  .lg\:mt-0 {
+    margin-top: 0px;
+  }
+
   .lg\:ml-10 {
     margin-left: 2.5rem;
   }
@@ -1880,10 +1884,6 @@ select {
 
   .lg\:mt-2 {
     margin-top: 0.5rem;
-  }
-
-  .lg\:mt-0 {
-    margin-top: 0px;
   }
 
   .lg\:ml-0 {
